@@ -1,13 +1,13 @@
 ---
 emoji: 🔮
-title: Gatsby 테마로 GitHub Blog 만들기
-date: '2021-07-06 00:00:00'
-author: 줌코딩
-tags: ExtJs github-pages gatsby
+title: Menginstall ExtJs
+date: '2023-06-27 06:46:00'
+author: kamon.id
+tags: ExtJs install-extjs sencha-extjs
 categories: ExtJs
 ---
 
-제 블로그의 테마나 Gatsby의 다른 테마를 활용해서 Github Blog를 만들고 싶은 분들이 계실텐데요! 이런 분들에게 도움을 드리고자 이 글을 쓰게 되었습니다. 잘 안되는 부분이나 궁금한 점을 댓글로 남겨주면 확인해보고 답변 드리도록 하겠습니다!
+ExtJs adalah sebuah framework Javascript yang dibuat oleh Sencha yang berperan sebagai tampilan antarmuka kepada user atau pengguna. ExtJs bekerja pada sebuah browser di sisi client. Untuk membuat sebuah tampilan secara dinamis diperlukan juga sebuah pemrograman pada sisi server biasanya menggunakan bahasa yang lain. Untuk dapat bekerja menggunakan framework ini diperlukan sebuah tools atau perlengkapan yang harus diinstall dahulu pada komputer. Berikut ini adalah langkah-langkah untuk mengistall perlengkapan tersebut: 
 
 ## 1. Repository 생성하기
 

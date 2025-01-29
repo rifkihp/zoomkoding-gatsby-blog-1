@@ -2,7 +2,7 @@ import { Link } from 'gatsby';
 import React from 'react';
 import './style.scss';
 
-function PostHeader({ post }) {
+function PostHeader({ post, viewCount }) {
   return (
     <header className="post-header">
       {post.emoji && <div className="emoji">{post.emoji}</div>}
@@ -22,6 +22,7 @@ function PostHeader({ post }) {
           posted by <strong>{post.author}</strong>,
         </div>{' '}
         {post.date}
+        {viewCount && ` · ${viewCount} views`}
       </div>
     </header>
   );

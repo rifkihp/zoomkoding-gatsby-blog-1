@@ -14,19 +14,48 @@
   }
 }
 
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
 .bio {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  margin-top: 120px;
-  margin-bottom: 120px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 
   color: var(--primary-text-color);
 
   @include md {
     flex-direction: row;
     align-items: center;
+  }
+
+  
+  .blob-rotate-faster {
+    animation: rotate 25s linear infinite;
+    height: 100%;
+    color: var(--color-fill-primary);
+    fill: currentColor;
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .relative-blob {
+    position: relative;
+    width: 250px;
+    height: 250px;
   }
 
   .introduction {
@@ -106,5 +135,16 @@
     @include md {
       display: block;
     }
+  }
+
+  .photo {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    width: 220px;
+    height: 220px;
+    margin-bottom: 0;
+    border-radius: 50%;
+    background-clip: padding-box;
   }
 }

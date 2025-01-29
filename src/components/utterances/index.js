@@ -1,18 +1,7 @@
 import React, { createRef, useEffect, useRef } from 'react';
-import { getValueFromLocalStorage } from '../../utils/localStorage';
 
-const url = 'https://utteranc.es';
+const src = 'https://utteranc.es/client.js';
 const branch = 'master';
-
-const getTheme = () => getValueFromLocalStorage('isDarkMode') ? 'photon-dark' : 'github-light'
-
-const resetChangeListener = () => {
-  const utterances = document.querySelector('iframe')?.contentWindow;
-  utterances?.postMessage({
-    type: 'set-theme',
-    theme: getTheme()
-  }, url);
-}
 
 function Utterances({ repo, path }) {
   const rootElm = createRef();
@@ -20,13 +9,14 @@ function Utterances({ repo, path }) {
 
   useEffect(() => {
     if (!rootElm.current || isUtterancesLoaded.current) return;
+    const storedIsDarkMode = localStorage.getItem('isDarkMode');
 
     const utterances = document.createElement('script');
     const utterancesConfig = {
-      src: `${url}/client.js`,
+      src,
       repo,
       branch,
-      theme: getTheme(),
+      theme: JSON.parse(storedIsDarkMode) ? 'photon-dark' : 'github-light',
       label: 'comment',
       async: true,
       'issue-term': 'pathname',
@@ -37,7 +27,6 @@ function Utterances({ repo, path }) {
       utterances.setAttribute(configKey, utterancesConfig[configKey]);
     });
     rootElm.current.appendChild(utterances);
-    window.addEventListener('theme', resetChangeListener)
     isUtterancesLoaded.current = true;
   }, [repo, rootElm, path]);
 

@@ -9,22 +9,7 @@ function Bio({ author, language = 'ko' }) {
   const { bio, social, name } = author;
   return (
     <div className="bio">
-      {language === 'ko' ? (
-        <div className="introduction korean">
-          <p className="title">
-            안녕하세요.
-            <br />
-            <ReactRotatingText items={bio.description} />
-            <br />
-            {bio.role} <strong>{name}</strong>입니다.
-            <br />
-          </p>
-          <div className="social-links">
-            <IconButtonBar links={social} />
-          </div>
-        </div>
-      ) : (
-        <div className="introduction english">
+      <div className="introduction english">
           <p className="title">
             Hello,
             <br />
@@ -40,10 +25,18 @@ function Bio({ author, language = 'ko' }) {
           <div className="social-links">
             <IconButtonBar links={social} />
           </div>
-        </div>
-      )}
+      </div>
+      
       <div className="thumbnail-wrapper">
-        <Image style={{ width: 250, height: 250 }} src={bio.thumbnail} alt="thumbnail" />
+        <div className='relative'>
+            
+            <div aria-hidden="true">
+              <div className='relative-blob'>
+                
+                <Image src={bio.thumbnail} className='photo' alt="thumbnail" />
+              </div>
+            </div>
+        </div>
       </div>
     </div>
   );
