@@ -1,8 +1,8 @@
 module.exports = {
-  title: `kamon.id`,
+  title: `rifkihp.com`,
   description: `living, coding, writing`,
   language: `en`, // `ko`, `en` => currently support versions for Korean and English
-  siteUrl: `https://www.kamon.id`,
+  siteUrl: `https://www.rifkihp.com`,
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
   comments: {
     utterances: {
@@ -11,14 +11,14 @@ module.exports = {
   },
   ga: '0', // Google Analytics Tracking ID
   author: {
-    name: `kamon.id`,
+    name: `rifkihp.com`,
     bio: {
       role: `developer`,
       description: ['who like to write', 'making something great', 'who enjoys learning', 'interested in UI/UX'],
       thumbnail: '20200608_20062011.png', // Path to the image in the 'asset' folder
     },
     social: {
-      github: ``, // `https://github.com/zoomKoding`,
+      github: `https://github.com/rifkihp`,
       linkedIn: ``, // `https://www.linkedin.com/in/jinhyeok-jeong-800871192`,
       email: `kiezie08@gmail.com`, // `zoomkoding@gmail.com`,
     },
